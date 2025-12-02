@@ -35,13 +35,36 @@ To install Java and Maven:
 After installation, verify versions using:
 
 To verify Java and Maven installation, run:
-
-To verify Java and Maven installation, run:
-
 ```bash
 java -version
 mvn -version
 ```
+## Installation_Guide:
+Step-1. Open your terminal and navigate to the folder where you want to keep this project.
+
+Step-2. Clone the repository by typing the below command in the terminal:
+
+```bash
+git clone https://github.com/<your-username>/spoonacular-api-tests.git
+```
+Step-3. Navigate to the project's root folder:
+
+```bash
+cd spoonacular-api-tests
+```
+Step-4. Install all required dependencies by running the following Maven command:
+
+```bash
+mvn clean install
+```
+Step-5. Create an account on <https://spoonacular.com/food-api> and log in.
+Step-6. After logging in, click on **My Console → Profile → Show/Hide API Key** and copy your API Key safely.
+Step-7. Create a `.env` file in the project root with the following content:
+```bash
+API_KEY=your_actual_api_key_here
+```
+Step-8. Make sure `.env` is **not** committed to Git by keeping it listed in your `.gitignore` file.
+
 ## Features_and_project_walkthrough:
 Step-1. Execute the automated test suite using the following Maven command from the project root:
 
@@ -187,6 +210,15 @@ After execution, Maven will generate detailed test reports which can be found un
 These reports provide information about passed tests, failed tests, and any errors encountered during execution.
 
 
+## Endpoints_Covered:
+
+| Test Class                          | Spoonacular Endpoint / Feature                 |
+|-------------------------------------|-----------------------------------------------|
+| `GetComplexSearchTest`              | `/recipes/complexSearch`                      |
+| `GetRecipeInfoTest`                 | `/recipes/{id}/information`                   |
+| `GetSimilarRecipesTest`             | `/recipes/{id}/similar`                       |
+| `GetIngredientInfoTest`             | `/food/ingredients/{id}/information`          |
+| `GetRecipesByIngredientsTest`       | `/recipes/findByIngredients`                  |
 
 
 
