@@ -1,16 +1,17 @@
-# Maven
-target/
-pom.xml.tag
-pom.xml.next
-release.properties
-dependency-reduced-pom.xml
-buildNumber.properties
-
-# IntelliJ IDEA
-.idea/
-*.iml
-*.ipr
-*.iws
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+.venv
+venv/
+env/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.coverage
+htmlcov/
 
 # macOS
 .DS_Store
